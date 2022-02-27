@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Avatar?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="754.0" style="-fx-background-color: #FAFAE2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campination.gestionsortie.gui.SortiebaladeController">
+   <children>
+      <Label fx:id="LafficheSB" layoutX="328.0" layoutY="285.0" prefHeight="253.0" prefWidth="412.0" style="-fx-background-color: #DDFFD7;" />
+      <Button layoutX="328.0" layoutY="246.0" minHeight="16.0" mnemonicParsing="false" onAction="#afficherSB" prefWidth="60.0" style="-fx-background-color: #22663B;" text="afficher" />
+      <Accordion layoutY="81.0" prefHeight="471.0" prefWidth="202.0">
+        <panes>
+          <TitledPane animated="false" text="sortie">
+            <content>
+              <AnchorPane fx:id="menuS" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #DDFFD7;" />
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Button layoutX="228.0" layoutY="330.0" mnemonicParsing="false" onAction="#chercherSB" style="-fx-background-color: #22663B;" text="Recherche" />
+      <Button layoutX="646.0" layoutY="219.0" mnemonicParsing="false" onAction="#modifierSB" style="-fx-background-color: #22663B;" text="Modifier" />
+      <Button layoutX="575.0" layoutY="219.0" mnemonicParsing="false" onAction="#AjouterSB" prefWidth="57.0" style="-fx-background-color: #22663B;" text="Ajouter" textAlignment="CENTER">
+         <effect>
+            <Glow />
+         </effect>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <Avatar layoutX="704.0" layoutY="7.0">
+         <image>
+            <Image url="@../../../../../../../../Users/AAAAA/Downloads/received_672189324095847.jpeg" />
+         </image>
+      </Avatar>
+      <Button layoutX="228.0" layoutY="382.0" mnemonicParsing="false" onAction="#trierSB" prefHeight="30.0" prefWidth="77.0" style="-fx-background-color: #22663B;" text="Tri" />
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="7.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Users/AAAAA/Downloads/logo%20(7)%20(1).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="73.0" layoutY="50.0" text="CAMPINATION" textFill="#22663b">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="86.0" text="Date depart*" textFill="#514444">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="134.0" text="Date retour*">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="237.0" layoutY="181.0" text="Destination*">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="503.0" layoutY="86.0" text="Transporteur">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="134.0" text="Type de sport">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label layoutX="519.0" layoutY="181.0" text="Coach">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="CBOXdestination" layoutX="312.0" layoutY="176.0" prefHeight="26.0" prefWidth="100.0" />
+      <ComboBox fx:id="CBOXtransporteur" layoutX="571.0" layoutY="81.0" prefHeight="26.0" prefWidth="100.0" />
+      <ComboBox fx:id="CBOXcoach" layoutX="571.0" layoutY="176.0" prefHeight="26.0" prefWidth="100.0" />
+      <ComboBox fx:id="CBOXtypeS" layoutX="571.0" layoutY="129.0" prefHeight="26.0" prefWidth="100.0" />
+      <DatePicker fx:id="Bdatedepart" layoutX="308.0" layoutY="73.0" prefHeight="26.0" prefWidth="100.0" />
+      <DatePicker fx:id="BdateR" layoutX="305.0" layoutY="121.0" prefHeight="26.0" prefWidth="106.0" />
+      <Text layoutX="269.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les champs avec * doivent être remplis" wrappingWidth="238.34375762939453">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
