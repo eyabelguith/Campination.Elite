@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="681.0" prefWidth="1134.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campination.gestionsortie.gui.HomeAfficherSBController">
+    <stylesheets>
+        <URL value="@homeaffichersb.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="TSB" layoutX="258.0" layoutY="227.0" onMouseClicked="#click" prefHeight="433.0" prefWidth="488.0" style="-fx-background-color: #d7c2e4;">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="113.0" text="reference de sortie" />
+          <TableColumn fx:id="coldest" prefWidth="105.0" text="destination" />
+            <TableColumn fx:id="coldep" prefWidth="106.0" text="date depart" />
+            <TableColumn fx:id="colret" prefWidth="92.0" text="date retour " />
+            <TableColumn fx:id="coltran" prefWidth="75.0" text="transport" />
+        </columns>
+      </TableView>
+      <Button fx:id="button11" layoutX="651.0" layoutY="158.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: F19A16;" text="Supprimer" />
+      <TextField fx:id="TxtId" layoutX="524.0" layoutY="158.0" prefHeight="25.0" prefWidth="127.0" />
+      <ComboBox fx:id="CBoxR1" layoutX="268.0" layoutY="152.0" prefHeight="25.0" prefWidth="127.0" />
+      <Button fx:id="BrechercheSB" layoutX="406.0" layoutY="170.0" mnemonicParsing="false" onAction="#RechercheSB" style="-fx-background-color: F19A16;" text="Rechercher" />
+      <TextField fx:id="Trecherche" layoutX="268.0" layoutY="188.0" prefHeight="25.0" prefWidth="127.0" />
+      <Button fx:id="buttonM" layoutX="918.0" layoutY="601.0" mnemonicParsing="false" onAction="#modifier" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: F19A16;" text="Modifier" />
+      <Text layoutX="62.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination" wrappingWidth="178.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="92.0" fitWidth="116.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="176.0" prefHeight="486.0" prefWidth="233.0" style="-fx-background-color: #350642; -fx-background-radius: 0px 30px;">
+         <children>
+            <Button layoutY="14.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Utilisateurs" textFill="#f19a16">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="71.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Destinations" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="127.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" />
+            <Button layoutX="5.0" layoutY="127.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: #350642;" text="Magasin" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="5.0" layoutY="183.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Evenements" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="62.0" layoutY="303.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: #350642;" text="Transports" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#gov2" prefHeight="56.0" prefWidth="178.0" style="-fx-background-color: #350642;" text="VIPs" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="243.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Sorties" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="881.0" layoutY="182.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7c2e4" height="361.0" layoutX="-81.0" layoutY="48.0" stroke="#f3f5b8" strokeType="OUTSIDE" strokeWidth="4.0" width="297.0" />
+            <TextField fx:id="t1" layoutX="36.0" layoutY="86.0" />
+            <TextField fx:id="t2" layoutX="47.0" layoutY="149.0" />
+            <TextField fx:id="t3" layoutX="47.0" layoutY="216.0" />
+            <TextField fx:id="t4" layoutX="47.0" layoutY="298.0" />
+            <TextField fx:id="t5" layoutX="47.0" layoutY="367.0" />
+            <Text layoutX="-74.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="veillez selectioner la sortie a modifier">
+               <font>
+                  <Font size="10.0" />
+               </font></Text>
+            <Text layoutX="-74.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="reference de sortie" />
+            <Text layoutX="-63.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="destination" />
+            <Text layoutX="-56.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date depart" />
+            <Text layoutX="-57.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="date retour " />
+            <Text layoutX="-45.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="transport" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="969.0" layoutY="23.0" mnemonicParsing="false" onAction="#returni" prefHeight="46.0" prefWidth="149.0" style="-fx-background-color: #F19A16;" text="Retourner">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="36.0" fitWidth="38.0" layoutX="973.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../chouf%20lena%20afficheSB/CampinationGestionSortie4/CampinationGestionSortie/src/campination/gestionsortie/gui/images/img_506421.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1059.0" layoutY="86.0" mnemonicParsing="false" onAction="#goajout" prefHeight="46.0" prefWidth="59.0" style="-fx-background-color: #F19A16;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../chouf%20lena%20afficheSB/CampinationGestionSortie4/CampinationGestionSortie/src/campination/gestionsortie/gui/images/person-add_icon-icons.com_50077.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

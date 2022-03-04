@@ -17,6 +17,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -40,26 +42,49 @@ public class SortiebaladeServices implements IsortiebaladeServices {
     public int ajouterSortiebalade(Sortiebalade sb) {
        int x = 0;
         try { 
-           String sql ="INSERT INTO `sortiebalade`( `id_destinationB`, `date_depart`,`date_retour`, `id_transporteur`) VALUES ('6','2022/03/28','2022/03/30','29');";
-       
+           //String sql ="INSERT INTO `sortiebalade`( `id_destinationB`, `date_depart`,`date_retour`, `id_transporteur`) VALUES ('6','2022/03/28','2022/03/30','29');";
+       String sql ="INSERT INTO `sortiebalade`(`id_destinationB`, `date_depart`, `date_retour`, `id_transporteur`) VALUES ('"+sb.getId_destinationB()+"','"+sb.getDate_depart()+"','"+sb.getDate_retour()+"','"+sb.getId_transporteur()+"');";
         System.out.println("ok");
+         //java.sql.Date sqlDate=new java.sql.Date(sb.getDate_depart().getTime());
+         // java.sql.Date sqlDate2=new java.sql.Date(sb.getDate_retour().getTime());
             x = ste.executeUpdate(sql);
         } catch (SQLException ex) {
+           ex.printStackTrace();
             Logger.getLogger(SortiebaladeServices.class.getName()).log(Level.SEVERE, null, ex);
         }
         return  x;}
 
+    
+    
+    
+    
+    
+    
+    
+    
     @Override
     public int modifierSortiebalade(Sortiebalade sb) {
-      
-     int x = 0;
+     String sq13="UPDATE sortiebalade SET `id_SB`=?,`id_destinationB`=?,`date_depart`=?,`date_retour`=?,`id_transporteur`=? Where id_SB=?";
+           
         try {
-            String sql3 ="UPDATE `sortiebalade` SET `id_destinationB`='0' WHERE 1";
-            x=ste.executeUpdate(sql3);
-        } catch (SQLException ex){
+            PreparedStatement pst = connx.prepareStatement(sq13);
+            pst.setString(1, String.valueOf(sb.getId_SB()));
+            
+             pst.setString(2, String.valueOf(sb.getId_destinationB()));
+             
+               pst.setString(3, String.valueOf(sb.getDate_depart()));
+                pst.setString(4, String.valueOf(sb.getDate_retour()));
+            pst.setString(5, String.valueOf(sb.getId_transporteur()));
+          pst.setString(6, String.valueOf(sb.getId_SB()));
+           
+           
+            pst.executeUpdate();
+           
+        } catch (SQLException ex) {
+            ex.printStackTrace();
             Logger.getLogger(SortiebaladeServices.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return x;
+        return 0;
       }
 
     @Override
@@ -68,7 +93,7 @@ public class SortiebaladeServices implements IsortiebaladeServices {
       try {
             String sql2 = "Delete from sortiebalade where id_SB= ? ";
             PreparedStatement pst = connx.prepareStatement(sql2);
-            pst.setInt(1,5);
+            pst.setInt(1,sb.getId_SB());
             x= pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(SortiebaladeServices.class.getName()).log(Level.SEVERE, null, ex);
@@ -104,8 +129,69 @@ public class SortiebaladeServices implements IsortiebaladeServices {
        {
        	 System.out.println (sb);
        }
-return sortiesbalade; }}
+return sortiesbalade; }
+
+    @Override
+    public ObservableList<Sortiebalade> sbaffiche() {
+      ObservableList<Sortiebalade> list = FXCollections.observableArrayList();
+        try {
+            PreparedStatement ps = connx.prepareStatement("select * from sortiebalade");
+            ResultSet rs = ps.executeQuery();
+            
+            while (rs.next()){   
+                list.add(new Sortiebalade(rs.getInt(1),rs.getInt(2),rs.getDate(3),rs.getDate(4),rs.getInt(5)
+                ) );            
+            }
+        } catch (Exception e) {
+        } for(Sortiebalade D: list)
+       {
+
+       	 System.out.println (D);
+        
+         
+      }    
+        return list;}
+
     
+    
+    
+    
+    
+    
+    @Override
+    public ArrayList<Sortiebalade> rechercherSB(String C,String V) {
+       ArrayList<Sortiebalade> Sortiebalade = new ArrayList<>();
+     try {
+         String sql1="select * from sortiebalade where  " + C + " =\""  + V+ "\""  ;
+            
+         
+            System.out.println(sql1);
+            
+            ResultSet rs = ste.executeQuery(sql1);
+            Sortiebalade D;
+            
+        while (rs.next()) {
+           D = new Sortiebalade( rs.getInt(1),rs.getInt(2),rs.getDate(3),rs.getDate(4),rs.getInt(5));
+       
+           Sortiebalade.add(D);
+            
+        
+        }
+        } catch (SQLException ex) {
+            Logger.getLogger(SortiebaladeServices.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     for(Sortiebalade D: Sortiebalade)
+       {
+
+         System.out.println (D);
+         
+      }
+     
+     return Sortiebalade;
+    }}
+
+
+
     
     
     

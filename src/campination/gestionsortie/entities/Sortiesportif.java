@@ -17,7 +17,7 @@ public class Sortiesportif extends Sortie{
     private int id_destinationS;
     private String type_sport;
     private int id_coach ;
- private int nb_SS=0;
+
     public Sortiesportif() {
     }
 
@@ -28,6 +28,10 @@ public class Sortiesportif extends Sortie{
         this.type_sport = type_sport;
         this.id_coach = id_coach;
         
+    }
+
+    public Sortiesportif(int aInt, java.sql.Date date, java.sql.Date date0, String string, int aInt0, int aInt1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
    
 

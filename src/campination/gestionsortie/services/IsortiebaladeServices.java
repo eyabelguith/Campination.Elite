@@ -7,15 +7,17 @@ package campination.gestionsortie.services;
 
 import campination.gestionsortie.entities.Sortiebalade;
 import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 /**
  *
  * @author Eya
  */
 public interface IsortiebaladeServices {
-    public int ajouterSortiebalade(Sortiebalade sp);
-    public int modifierSortiebalade(Sortiebalade sp); 
-    public int supprimerSortiebalade(Sortiebalade sp);
-    public ArrayList<Sortiebalade> afficherSortiebalade();   
-}
+    public int ajouterSortiebalade(Sortiebalade sb);
+    public int modifierSortiebalade(Sortiebalade sb); 
+    public int supprimerSortiebalade(Sortiebalade sb);
+    public ArrayList<Sortiebalade> afficherSortiebalade();
+    public ObservableList <Sortiebalade > sbaffiche();
+public  ArrayList<Sortiebalade>rechercherSB(String  C ,String V);}
 

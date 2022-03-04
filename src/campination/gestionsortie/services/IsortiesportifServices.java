@@ -7,6 +7,7 @@ package campination.gestionsortie.services;
 
 import campination.gestionsortie.entities.Sortiesportif;
 import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -17,4 +18,5 @@ public interface IsortiesportifServices {
     public int modifierSortiesportif(Sortiesportif ss); 
     public int supprimerSortiesportif(Sortiesportif ss);
     public ArrayList<Sortiesportif> afficherSortiesportif();
+      public ObservableList <Sortiesportif > sbaffiche();
 }

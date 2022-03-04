@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="1141.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campination.gestionsortie.gui.HomeAfficheVIPController">
+    <stylesheets>
+        <URL value="@homeaffichevip.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="TSB" layoutX="284.0" layoutY="225.0" onMouseClicked="#click" prefHeight="405.0" prefWidth="526.0" style="-fx-background-color: #d7c2e4;">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="50.0" text="ref" />
+            <TableColumn fx:id="colnbpt" prefWidth="142.0" text="nombre des points SB" />
+            <TableColumn fx:id="colcin" prefWidth="131.0" text="nombre des points" />
+            <TableColumn fx:id="colnbSS" prefWidth="64.0" text="cin" />
+            <TableColumn fx:id="colnbSB" prefWidth="138.0" text="nombre des points SS" />
+         </columns>
+      </TableView>
+      <Button fx:id="BrechercheSB" layoutX="459.0" layoutY="174.0" mnemonicParsing="false" onAction="#RechercheSB" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #F19A16;" text="Recherche">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="Trecherche" layoutX="284.0" layoutY="152.0" />
+      <Button fx:id="button3" layoutX="742.0" layoutY="174.0" mnemonicParsing="false" onAction="#supprimer3" prefHeight="33.0" prefWidth="75.0" style="-fx-background-color: #F19A16;" text="Supprimer" />
+      <TextField fx:id="TxtId3" layoutX="582.0" layoutY="177.0" />
+      <AnchorPane layoutX="10.0" layoutY="114.0" prefHeight="527.0" prefWidth="240.0" style="-fx-background-color: #350642; -fx-background-radius: 0px 30px;">
+         <children>
+            <Button layoutY="14.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Utilisateurs" textFill="#f19a16">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="71.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Destinations" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="127.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" />
+            <Button layoutX="5.0" layoutY="127.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: #350642;" text="Magasin" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="5.0" layoutY="183.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Evenements" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="62.0" layoutY="303.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: #350642;" text="Transports" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="37.0" layoutY="359.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="178.0" style="-fx-background-color: #350642;" text="VIPs" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutY="243.0" mnemonicParsing="false" onAction="#gos" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Sorties" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text layoutX="72.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination" wrappingWidth="178.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="92.0" fitWidth="116.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="966.0" layoutY="14.0" mnemonicParsing="false" onAction="#returni" prefHeight="46.0" prefWidth="149.0" style="-fx-background-color: #F19A16;" text="Retourner">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonM" layoutX="940.0" layoutY="602.0" mnemonicParsing="false" onAction="#modifier" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: F19A16;" text="Modifier" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d7c2e4" height="369.0" layoutX="843.0" layoutY="229.0" stroke="#f3f5b8" strokeType="OUTSIDE" strokeWidth="4.0" width="270.0" />
+      <Button layoutX="1050.0" layoutY="101.0" mnemonicParsing="false" onAction="#goajout" style="-fx-background-color: #F19A16;" text="Ajouter" />
+      <TextField fx:id="TX" layoutX="904.0" layoutY="281.0" />
+      <TextField fx:id="TXX" layoutX="892.0" layoutY="346.0" />
+      <TextField fx:id="TXXX" layoutX="904.0" layoutY="401.0" />
+      <TextField fx:id="TXXXX" layoutX="904.0" layoutY="464.0" />
+      <TextField fx:id="TXXXXX" layoutX="904.0" layoutY="524.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+#anchor{
+-fx-background-color : linear-gradient(to left,#B6D8F2,#CFF4D2);
+}
+#txtf{
+-fx-border-radius:25px;
+-fx-border :solid;
+}

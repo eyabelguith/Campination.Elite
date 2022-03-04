@@ -1,7 +1,9 @@
   
 import campination.gestionsortie.entities.Sortiebalade;
+import campination.gestionsortie.entities.Sortiesportif;
 import campination.gestionsortie.entities.VIP;
 import campination.gestionsortie.services.SortiebaladeServices;
+import campination.gestionsortie.services.SortiesportifServices;
 import campination.gestionsortie.services.VipServices;
 import campination.gestionsortie.utils.MyConnexion;
 
@@ -27,11 +29,14 @@ public class Main {
        VipServices serv = new VipServices();
        Sortiebalade s = new Sortiebalade();
        VIP v = new VIP();
-       //service.ajouterSortiebalade(s);
-       //service.supprimersortie(p);
+       service.ajouterSortiebalade(s);
+       //service.supprimerSortiebalade(s);
        //service.modifiersortie(p);
        //service.afficherSortiebalade();
-serv.ajouterSVip(v);
+//serv.ajouterSVip(v);
+  //serv.modifierVip(v);
+   // serv.supprimerVip(v);
+   // service.public ObservableList <Sortiesportif > sbaffiche();
     }
     
 }

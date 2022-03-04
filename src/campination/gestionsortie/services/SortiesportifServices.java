@@ -15,6 +15,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -36,7 +38,7 @@ public class SortiesportifServices implements IsortiesportifServices{
     public int ajouterSortiesportif(Sortiesportif ss) {
         int x = 0;
         try {
-           String sql ="INSERT INTO `sortiesportif`( `id_destinationS`, `date_depart`,`date_retour`, `id_transporteur`,`id_coach`, `type_sport`) VALUES ('5','2022/03/28','2022/03/30','29','9','yoga');";
+           String sql ="INSERT INTO `sortiesportif`( `id_destinationS`, `date_depart`,`date_retour`, `id_transporteur`,`id_coach`, `type_sport`) VALUES ('"+ss.getId_destinationS()+"','"+ss.getDate_depart()+"','"+ss.getDate_retour()+"','"+ss.getId_transporteur()+"','"+ss.getId_coach()+"','"+ss.getType_sport()+"');";
         
             x = ste.executeUpdate(sql);
         } catch (SQLException ex) {
@@ -61,7 +63,7 @@ public class SortiesportifServices implements IsortiesportifServices{
       try {
             String sql2 = "Delete from sortiesportif where id_SS= ? ";
             PreparedStatement pst = connx.prepareStatement(sql2);
-            pst.setInt(1,5);
+            pst.setInt(1,ss.getId_SS());
             x= pst.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(SortiesportifServices.class.getName()).log(Level.SEVERE, null, ex);
@@ -101,4 +103,28 @@ public class SortiesportifServices implements IsortiesportifServices{
        	 System.out.println (ss);
        }
 return Sortiessportif; }
+
+    @Override
+    public ObservableList<Sortiesportif> sbaffiche() {
+        ObservableList<Sortiesportif> list = FXCollections.observableArrayList();
+        try {
+            PreparedStatement ps = connx.prepareStatement("select * from sortiesportif");
+            ResultSet rs = ps.executeQuery();
+            
+            while (rs.next()){   
+                System.out.println("fghj");
+                list.add(new Sortiesportif(
+                       rs.getInt(1),
+                    rs.getInt(2), 
+                    rs.getString(5),
+                    rs.getInt(6),
+                     rs.getDate(3),
+                    rs.getDate(4),
+            rs.getInt(7)
+                ) );            
+            }
+        } catch (Exception e) {
+        
+      }    
+        return list;}
 }

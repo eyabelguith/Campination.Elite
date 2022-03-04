@@ -14,7 +14,7 @@ import java.util.Date;
 public class Sortiebalade extends Sortie {
     private int id_SB;
             private int id_destinationB;
-           private int nb_SB=0;
+          
 
     public Sortiebalade() {
     }
@@ -49,13 +49,19 @@ public class Sortiebalade extends Sortie {
     
     
     
-    @Override
+    /*@Override
     public String toString() {
         
         return "Sortiebalade{" + "id_SB=" + id_SB + ", id_destinationB=" + id_destinationB +  '}';
-    }
+    }*/
+    
 
   
+
+    @Override
+    public String toString() {
+        return "Sortiebalade{" + "id_SB=" + id_SB + ", id_destinationB=" + id_destinationB + '}';
+    }
 
     @Override
     public boolean equals(Object obj) {

@@ -6,6 +6,7 @@
 package campination.gestionsortie.services;
 import campination.gestionsortie.entities.VIP;
 import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 /**
  *
@@ -17,4 +18,5 @@ public interface Ivip {
     public int supprimerVip(VIP v);
     public ArrayList<VIP> afficherVip(); 
   // public int calculepoints ();
+      public ObservableList <VIP > vaffiche();
 }
