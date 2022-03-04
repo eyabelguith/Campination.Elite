@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+#navbar{
+    -fx-background-color: #350642;
+    -fx-background-radius: 0px 30px;
+}
+#anchor{
+     -fx-background-radius:80px;
+     -fx-background-color: #F19A16r;
+}
+#anchor2{
+    -fx-background-color:  #F19A16;
+     -fx-background-radius:-fx-background-radius;
+}
+#anchor3{
+    -fx-background-radius: 0px 40px;}
+#anchor4{
+    -fx-background-radius: 0px 40px;
+    -fx-background-color:  #F19A16;
+}
