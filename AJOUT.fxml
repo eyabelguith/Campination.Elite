@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="758.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="gui.AJOUTController">
+   <children>
+      <TextField fx:id="nom" layoutX="137.0" layoutY="14.0" />
+      <TextField fx:id="gouvernorat" layoutX="137.0" layoutY="53.0" />
+      <TextField fx:id="type" layoutX="137.0" layoutY="97.0" />
+      <TextArea fx:id="description" layoutX="122.0" layoutY="167.0" prefHeight="252.0" prefWidth="280.0" />
+      <Button fx:id="photo" layoutX="491.0" layoutY="316.0" mnemonicParsing="false" text="Ajouter image" />
+      <Label fx:id="path3" layoutX="500.0" layoutY="123.0" prefHeight="18.0" prefWidth="150.0" text="path image 3" />
+      <Label fx:id="path2" layoutX="500.0" layoutY="70.0" prefHeight="18.0" prefWidth="150.0" text="path image 2" />
+      <Label fx:id="path4" layoutX="500.0" layoutY="179.0" prefHeight="18.0" prefWidth="150.0" text="path image 4" />
+      <Label fx:id="path1" layoutX="500.0" layoutY="17.0" prefHeight="18.0" prefWidth="150.0" text="path image 1" />
+      <Label fx:id="path5" layoutX="500.0" layoutY="233.0" prefHeight="18.0" prefWidth="150.0" text="path image 5" />
+      <Label layoutX="28.0" layoutY="18.0" text="Nom :" />
+      <Label layoutX="25.0" layoutY="57.0" text="Gouvernorat :" />
+      <Label layoutX="29.0" layoutY="101.0" text="type :" />
+      <Label layoutX="28.0" layoutY="284.0" text="Description :" />
+      <Button fx:id="submit" layoutX="629.0" layoutY="467.0" mnemonicParsing="false" text="Submit" />
+   </children>
+</AnchorPane>

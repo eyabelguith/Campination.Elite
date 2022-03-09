@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+#navbar{
+     -fx-background-color : #4F8B69;
+    -fx-background-radius:0px 12px 50px /20px 10px;
+}
+#navItem {
+     -fx-background-color : #4F8B69;
+}
+#button{
+    -fx-background-color : linear-gradient(#A5CAD2,#C9E3CC);
+}
+#btnBack{
+        -fx-background-color : linear-gradient(#5D7052,#A5CAD2);
+}

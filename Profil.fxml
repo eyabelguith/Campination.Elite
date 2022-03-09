@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="548.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ProfilController">
+   <children>
+      <Label fx:id="titre" layoutX="38.0" layoutY="14.0" text="Label">
+         <font>
+            <Font name="Arial" size="57.0" />
+         </font>
+      </Label>
+      <Label fx:id="gouvernorat" layoutX="321.0" layoutY="34.0" text="Label">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Text fx:id="description" layoutX="89.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="89.33665466308594">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="next" layoutX="660.0" layoutY="502.0" mnemonicParsing="false" text="&gt;" />
+      <Button fx:id="updat" layoutX="510.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="modifier" />
+      <Button fx:id="delet" layoutX="600.0" layoutY="33.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="supprimer" />
+   </children>
+</AnchorPane>
