@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="681.0" prefWidth="1134.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campination.gestionsortie.gui.HomeAfficherSBController">
+    <stylesheets>
+        <URL value="@homeaffichersb.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="TSB" layoutX="258.0" layoutY="227.0" onMouseClicked="#click" prefHeight="433.0" prefWidth="488.0" style="-fx-background-color: #d7c2e4;">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="113.0" text="nom" />
+          <TableColumn fx:id="coldest" prefWidth="105.0" text="destination" />
+            <TableColumn fx:id="coldep" prefWidth="106.0" text="date depart" />
+            <TableColumn fx:id="colret" prefWidth="92.0" text="date retour " />
+            <TableColumn fx:id="coltran" prefWidth="75.0" text="transport" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="CBoxR1" layoutX="268.0" layoutY="152.0" prefHeight="25.0" prefWidth="127.0" />
+      <Button fx:id="BrechercheSB" layoutX="406.0" layoutY="170.0" mnemonicParsing="false" onAction="#RechercheSB" style="-fx-background-color: F19A16;" text="Rechercher" />
+      <TextField fx:id="Trecherche" layoutX="268.0" layoutY="188.0" prefHeight="25.0" prefWidth="127.0" />
+      <Text layoutX="62.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination" wrappingWidth="178.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="92.0" fitWidth="116.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="176.0" prefHeight="486.0" prefWidth="233.0" style="-fx-background-color: #350642; -fx-background-radius: 0px 30px;">
+         <children>
+            <Button layoutY="14.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Utilisateurs" textFill="#f19a16">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="71.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Destinations" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="127.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" />
+            <Button layoutX="5.0" layoutY="127.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: #350642;" text="Magasin" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="5.0" layoutY="183.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Evenements" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="62.0" layoutY="303.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="127.0" style="-fx-background-color: #350642;" text="Transports" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#gov2" prefHeight="56.0" prefWidth="178.0" style="-fx-background-color: #350642;" text="VIPs" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="243.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="235.0" style="-fx-background-color: #350642;" text="Sorties" textFill="#f19a16">
+               <font>
+                  <Font name="Corbel Bold" size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="881.0" layoutY="182.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="969.0" layoutY="23.0" mnemonicParsing="false" onAction="#returni" prefHeight="46.0" prefWidth="149.0" style="-fx-background-color: #F19A16;" text="Retourner">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="36.0" fitWidth="38.0" layoutX="973.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../chouf%20lena%20afficheSB/CampinationGestionSortie4/CampinationGestionSortie/src/campination/gestionsortie/gui/images/img_506421.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="1059.0" layoutY="86.0" mnemonicParsing="false" onAction="#goajout" prefHeight="46.0" prefWidth="59.0" style="-fx-background-color: #F19A16;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../chouf%20lena%20afficheSB/CampinationGestionSortie4/CampinationGestionSortie/src/campination/gestionsortie/gui/images/person-add_icon-icons.com_50077.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Rating fx:id="rating" layoutX="479.0" layoutY="48.0" />
+      <Label fx:id="msg" layoutX="444.0" layoutY="78.0" text="Label" />
+   </children>
+</AnchorPane>

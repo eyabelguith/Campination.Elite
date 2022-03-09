@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="569.0" prefWidth="396.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campination.gestionsortie.gui.LoginController">
+    <stylesheets>
+        <URL value="@login.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutY="2.0" prefHeight="569.0" prefWidth="396.0" style="-fx-background-color: #350642; -fx-background-radius: 0px 30px;">
+         <children>
+            <TextField fx:id="loginfx1" layoutX="176.0" layoutY="232.0" prefHeight="42.0" prefWidth="163.0" />
+            <TextField fx:id="pwdfx1" layoutX="176.0" layoutY="313.0" prefHeight="42.0" prefWidth="163.0" />
+            <Button layoutX="164.0" layoutY="399.0" mnemonicParsing="false" onAction="#loginbtn" opacity="0.81" prefHeight="42.0" prefWidth="91.0" style="-fx-background-color: #F19A16;" text="Login">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Text layoutX="56.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="115.0" fitWidth="124.0" layoutX="142.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../chouf%20lena%20afficheSB/CampinationGestionSortie4/CampinationGestionSortie/src/campination/gestionsortie/gui/images/logo%20(7)%20(1)%20(2).png" />
+               </image>
+            </ImageView>
+            <Text fill="#f19a16" layoutX="90.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <AnchorPane fx:id="anchor3" layoutX="198.0" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #F19A16;" stylesheets="@styleRoyale.css" />
+            <AnchorPane fx:id="anchor3" layoutX="-1.0" layoutY="517.0" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #F19A16;" stylesheets="@styleRoyale.css" />
+            <Text layoutX="46.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="mot de passe">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
