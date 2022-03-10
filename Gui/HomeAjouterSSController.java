@@ -1,0 +1,184 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Campination.App.Gui;
+
+import Campination.App.Entity.Sortiesportif;
+import Campination.App.Services.SortiesportifServices;
+import Campination.App.Util.MyConnexion;
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+/**
+ * FXML Controller class
+ *
+ * @author Eya
+ */
+public class HomeAjouterSSController implements Initializable {
+
+    Connection coonx = null;
+    Statement st;
+    ResultSet rs = null;
+    @FXML
+    private TextField nomSS;
+    @FXML
+    private AnchorPane navbar;
+    @FXML
+    private Button navItem;
+    @FXML
+    private AnchorPane anchor;
+    @FXML
+    private AnchorPane anchor2;
+    @FXML
+    private Button logoutbtn1;
+
+    public HomeAjouterSSController() {
+        coonx = MyConnexion.getInstanceConnex().getConnection();
+    }
+    @FXML
+    private Button button;
+    @FXML
+    private ComboBox<?> CBOXdestination2;
+    @FXML
+    private ComboBox<?> CBOXcoach;
+    @FXML
+    private DatePicker Bdatedepart2;
+    @FXML
+    private DatePicker BdateR2;
+    @FXML
+    private ComboBox CBOXtypeSport;
+    @FXML
+    private ComboBox<?> CBOXtransporteur2;
+    private ComboBox choixS;
+    ObservableList<String> choix = FXCollections.observableArrayList("yoga", "natation", "skie", "gymnastique");
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        affectationDudestination();
+        affectationDuTransport();
+        affectationDuCoach();
+        CBOXtypeSport.setItems(choix);
+    }
+
+    @FXML
+    private void Ajouterss(ActionEvent event) {
+        SortiesportifServices service = new SortiesportifServices();
+        Sortiesportif s = new Sortiesportif();
+        //LocalDate value = Bdatedepart.getValue();
+        //LocalDate value1 = BdateR.getValue();
+        System.out.println(Bdatedepart2.getValue().getYear());
+        System.out.println(BdateR2.getValue().getYear());
+      //  s.setNom(Integer.parseInt(CBOXdestination2.getValue().toString()));
+        java.sql.Date date = java.sql.Date.valueOf(Bdatedepart2.getValue());
+        s.setDate_depart(date);
+        java.sql.Date date2 = java.sql.Date.valueOf(BdateR2.getValue());
+        s.setDate_retour(date2);
+        //s.setDate_depart((TextField)Bdatedepart.getEditor());.getText());
+        // s.setDate_depart.setText(String.valueOf(Bdatedepart.getValue()));
+        s.setCinT(Integer.parseInt(CBOXtransporteur2.getValue().toString()));
+        s.setCinCO(Integer.parseInt(CBOXcoach.getValue().toString()));
+        String x = (String) CBOXtypeSport.getValue();
+        s.setType_sport(x);
+        s.setNom_S(nomSS.getText().toString());
+  String d = (String) CBOXdestination2.getValue();
+        s.setNom_S(d);
+        /*int x=(int)CBOXtransporteur.getValue();
+     s.setId_transporteur(x);
+      int y=(int)CBOXdestination.getValue();
+     s.setId_destinationB(y);*/
+        service.ajouterSortiesportif(s);
+           try {
+            Parent root=FXMLLoader.load(getClass().getResource("HomeAfficherSS.fxml"));
+            Scene scene =new Scene(root);
+       Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private void affectationDudestination() {
+        try {
+
+            rs = coonx.createStatement().executeQuery("SELECT nom FROM `destination` WHERE type='sportif'");
+
+            ObservableList List = FXCollections.observableArrayList();
+            while (rs.next()) {
+
+                List.add(rs.getString(1));
+            }
+            CBOXdestination2.setItems(List);
+        } catch (Exception ex) {
+            System.out.println("error while inserting record. ");
+        }
+    }
+
+    private void affectationDuTransport() {
+        try {
+
+            rs = coonx.createStatement().executeQuery("select cinT from transporteur");
+
+            ObservableList List = FXCollections.observableArrayList();
+            while (rs.next()) {
+
+                List.add(rs.getString(1));
+            }
+            CBOXtransporteur2.setItems(List);
+        } catch (Exception ex) {
+            System.out.println("error while inserting record. ");
+        }
+    }
+
+    private void affectationDuCoach() {
+        try {
+
+            rs = coonx.createStatement().executeQuery("select cinCO from coach");
+
+            ObservableList List = FXCollections.observableArrayList();
+            while (rs.next()) {
+
+                List.add(rs.getString(1));
+            }
+            CBOXcoach.setItems(List);
+        } catch (Exception ex) {
+            System.out.println("error while inserting record. ");
+        }
+    }
+
+
+    @FXML
+    private void returni(ActionEvent event) {
+    }
+
+    @FXML
+    private void logout(ActionEvent event) {
+    }
+
+}

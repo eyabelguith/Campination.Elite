@@ -1,0 +1,12 @@
+/*
+ * Empty Stylesheet file.
+ */
+#navbar{
+      -fx-background-color : linear-gradient(#A5CAD2,#C9E3CC);
+    -fx-background-radius:0px 12px 50px /20px 10px;
+    
+}
+#btnusers{
+     -fx-background-color :linear-gradient(#A5CAD2,#C9E3CC);
+    
+}

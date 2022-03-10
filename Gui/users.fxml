@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="988.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="campination.gestionuser.gui.UsersController">
+    <stylesheets>
+        <URL value="@users.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="navbar" layoutY="73.0" prefHeight="587.0" prefWidth="258.0">
+         <children>
+            <Button fx:id="btnusers" layoutY="1.0" mnemonicParsing="false" onAction="#btnusers" prefHeight="78.0" prefWidth="258.0" stylesheets="@users.css" text="Gestion des comptes">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnusers" layoutY="79.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="258.0" text="Gestion des destinations" textFill="#02562a">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnusers" layoutY="157.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="258.0" text="Gestion des Evenement">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnusers" layoutY="235.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="258.0" text="Gestion magasin">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnusers" layoutY="300.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="258.0" text="Gestion Sortie">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnusers" layoutY="362.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="258.0" text="Gestion Transport">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnusers" layoutY="424.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="258.0" text="Paramétres Compte" />
+         </children>
+      </AnchorPane>
+      <Text fill="#31573f" layoutX="107.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tabC" layoutX="299.0" layoutY="178.0" prefHeight="383.0" prefWidth="643.0" style="-fx-background-color: #F0F0F0;">
+        <columns>
+          <TableColumn prefWidth="60.0" text="Nom" />
+          <TableColumn prefWidth="67.20001220703125" text="Prenom" />
+            <TableColumn prefWidth="73.5999755859375" text="CIN" />
+            <TableColumn prefWidth="71.19998168945312" text="Age" />
+            <TableColumn prefWidth="77.5999755859375" text="Gouvernorat" />
+            <TableColumn prefWidth="90.39996337890625" text="nombre sorties" />
+            <TableColumn prefWidth="61.5999755859375" text="Num Tel" />
+            <TableColumn prefWidth="60.0001220703125" text="Skills" />
+            <TableColumn prefWidth="90.39990234375" text="Action" />
+        </columns>
+      </TableView>
+      <Text layoutX="325.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Campers">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="832.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Totale" />
+      <Label layoutX="844.0" layoutY="135.0" text="(   )" />
+      <Label id="nbrC" fx:id="nbrC" layoutX="876.0" layoutY="136.0" prefHeight="18.0" prefWidth="22.0" />
+      <ImageView fitHeight="62.0" fitWidth="70.0" layoutX="25.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

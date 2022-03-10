@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="911.0" style="-fx-background-color: #e5e7e6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Campination.App.Gui.AcceuilController">
+   <children>
+      <AnchorPane layoutY="79.0" prefHeight="523.0" prefWidth="254.0" style="-fx-background-color: #350642; -fx-background-radius: 0px 30px;">
+         <children>
+            <Button fx:id="users" layoutX="-1.0" layoutY="22.0" mnemonicParsing="false" onAction="#goAcceuil" prefHeight="62.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="Users" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="dest" layoutY="96.0" mnemonicParsing="false" onAction="#godest" prefHeight="54.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="   Destinations" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-28.0" layoutY="100.0" prefHeight="46.0" prefWidth="94.0" style="-fx-background-radius: 80px; -fx-background-color: #f19a16;">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="47.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/map-localization-icon-14.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="mag" layoutX="-1.0" layoutY="162.0" mnemonicParsing="false" onAction="#goMag" prefHeight="46.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="Magasin" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-33.0" layoutY="162.0" prefHeight="46.0" prefWidth="94.0" style="-fx-background-radius: 80px; -fx-background-color: f19a16;">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="40.0" layoutX="47.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_61350.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="eventt" layoutX="-1.0" layoutY="227.0" mnemonicParsing="false" onAction="#goevent" prefHeight="46.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="      Evenement" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-40.0" layoutY="227.0" prefHeight="46.0" prefWidth="101.0" style="-fx-background-radius: 80px; -fx-background-color: #f19a16;">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="27.0" layoutX="54.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/event-icon-10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-43.0" layoutY="37.0" prefHeight="46.0" prefWidth="107.0" style="-fx-background-radius: 60px; -fx-background-color: #F19A16;">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="54.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_329115.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="sortie" layoutY="294.0" mnemonicParsing="false" onAction="#gosortie" prefHeight="46.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="Sortie" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-28.0" layoutY="294.0" prefHeight="46.0" prefWidth="94.0" style="-fx-background-color: f19a16; -fx-background-radius: 80px;">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="39.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Travel-Camping-Tent-icon%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="transp" layoutY="358.0" mnemonicParsing="false" onAction="#goTransp" prefHeight="46.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="       Transporteur" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-43.0" layoutY="358.0" prefHeight="46.0" prefWidth="107.0" style="-fx-background-radius: 80px; -fx-background-color: #f19a16;">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="54.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Icon-Campingbus-840x840.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="vip" layoutY="423.0" mnemonicParsing="false" onAction="#goVip" prefHeight="46.0" prefWidth="254.0" style="-fx-background-color: #350642;" text="VIP" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="anchor" layoutX="-31.0" layoutY="423.0" prefHeight="46.0" prefWidth="102.0" style="-fx-background-radius: 80px; -fx-background-color: f19a16;">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="43.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_336716.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor2" layoutX="726.0" layoutY="14.0" prefHeight="65.0" prefWidth="186.0" style="-fx-background-radius: 60px 0px 0px 0px; -fx-background-color: #F19A16;">
+         <children>
+            <Button fx:id="logoutbtn" layoutX="110.0" layoutY="9.0" mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: #F19A16;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_506421.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="34.0" layoutY="10.0" mnemonicParsing="false" onAction="#goProfil" prefHeight="51.0" prefWidth="62.0" style="-fx-background-color: #F19A16;" textFill="#f19a16">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/126376.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="339.0" layoutY="92.0" prefHeight="170.0" prefWidth="152.0" style="-fx-background-radius: 0px 40px; -fx-background-color: #F19A16;">
+         <children>
+            <ImageView fitHeight="122.0" fitWidth="115.0" layoutX="24.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/4500135.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="33.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camper">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="110.0" layoutY="157.0" mnemonicParsing="false" onAction="#gocamper" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: #F19A16;">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/291815.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor3" layoutX="536.0" layoutY="358.0" prefHeight="194.0" prefWidth="152.0" style="-fx-background-color: #F19A16; -fx-background-radius: 0px 40px;">
+         <children>
+            <ImageView fitHeight="137.0" fitWidth="102.0" layoutX="18.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/126376.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="31.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profil Admin" wrappingWidth="62.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="103.0" layoutY="139.0" mnemonicParsing="false" onAction="#go" prefHeight="12.0" prefWidth="34.0" style="-fx-background-color: #F19A16;" textFill="#f19a16" />
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="102.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/291815.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="605.0" layoutY="92.0" prefHeight="148.0" prefWidth="94.0" style="-fx-background-color: #F19A16; -fx-background-radius: 0px 30px;">
+         <children>
+            <ImageView fitHeight="115.0" fitWidth="122.0" layoutX="14.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_453193.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="26.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coach">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Text>
+            <Button layoutX="97.0" layoutY="163.0" mnemonicParsing="false" onAction="#goCoach" prefHeight="26.0" prefWidth="21.0" style="-fx-background-color: #F19A16;">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/291815.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="62.0" fitWidth="70.0" layoutX="30.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Text layoutX="103.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

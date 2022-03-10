@@ -1,0 +1,44 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+#navbar{
+     -fx-background-color : #4F8B69;
+    -fx-background-radius:0px 12px 50px /20px 10px;
+}
+#navItem {
+     -fx-background-color : #4F8B69;
+}
+#button{
+    -fx-background-color : linear-gradient(#A5CAD2,#C9E3CC);
+}
+#btnBack{
+        -fx-background-color : linear-gradient(#5D7052,#A5CAD2);
+}
+/*
+ * Empty Stylesheet file.
+ */
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:#350642;
+}
+.table-row-cell:selected .text {
+    -fx-fill : white ;
+
+
+}
+.table-view .column-header .label{
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+    -fx-cell-size: 30;
+    -fx-alignment: center-left;
+    -fx-text-fill: #000000;
+}
+

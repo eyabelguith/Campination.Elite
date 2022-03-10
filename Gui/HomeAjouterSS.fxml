@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="1010.0" style="-fx-background-color: #e5e7e6;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Campination.App.Gui.HomeAjouterSSController">
+    <stylesheets>
+        <URL value="@homeajouterss.css" />
+    </stylesheets>
+   <children>
+      <Text layoutX="121.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination" wrappingWidth="178.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="92.0" fitWidth="116.0" layoutX="21.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="855.0" layoutY="131.0" mnemonicParsing="false" onAction="#returni" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #e5e7e6;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/img_204972.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane fx:id="navbar" layoutX="-2.0" layoutY="77.0" prefHeight="573.0" prefWidth="278.0" style="-fx-background-color: #350642;" stylesheets="@styleRoyale.css">
+         <children>
+            <Button fx:id="navItem" layoutY="27.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="266.0" stylesheets="@styleRoyale.css" text="Users" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="88.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="266.0" text="Destinations" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="168.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="266.0" text=" Magasin" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="266.0" text=" Evènements" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutX="-5.0" layoutY="307.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="266.0" text=" Sorties" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutX="-5.0" layoutY="375.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="266.0" text="Transporteurs" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="444.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="266.0" text="VIP" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="anchor" layoutX="-54.0" layoutY="39.0" prefHeight="46.0" prefWidth="91.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_329115.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-54.0" layoutY="104.0" prefHeight="46.0" prefWidth="97.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="60.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/map-localization-icon-14.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="176.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="70.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_61350.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="240.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/event-icon-10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="310.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="65.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Travel-Camping-Tent-icon%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="387.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="69.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Icon-Campingbus-840x840.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-62.0" layoutY="449.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="63.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_336716.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="340.0" layoutY="181.0" prefHeight="362.0" prefWidth="602.0" style="-fx-background-color: fff; -fx-background-radius: 40;">
+         <children>
+            <TextField fx:id="nomSS" layoutX="215.0" layoutY="17.0" />
+            <ComboBox fx:id="CBOXdestination2" layoutX="136.0" layoutY="62.0" prefHeight="26.0" prefWidth="100.0" />
+            <ComboBox fx:id="CBOXtransporteur2" layoutX="439.0" layoutY="62.0" prefHeight="26.0" prefWidth="100.0" />
+            <DatePicker fx:id="BdateR2" layoutX="439.0" layoutY="129.0" prefHeight="26.0" prefWidth="106.0" />
+            <DatePicker fx:id="Bdatedepart2" layoutX="136.0" layoutY="134.0" prefHeight="26.0" prefWidth="100.0" />
+            <ComboBox fx:id="CBOXcoach" layoutX="138.0" layoutY="214.0" prefHeight="26.0" prefWidth="100.0" />
+            <ComboBox fx:id="CBOXtypeSport" layoutX="442.0" layoutY="214.0" prefHeight="26.0" prefWidth="100.0" />
+            <Label layoutX="343.0" layoutY="65.0" text="transporteur">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="218.0" text="Coach :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="336.0" layoutY="218.0" text="type de sport :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="342.0" layoutY="132.0" text="Date retour :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="139.0" text="Date depart :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="button" layoutX="200.0" layoutY="297.0" mnemonicParsing="false" onAction="#Ajouterss" prefHeight="36.0" prefWidth="178.0" style="-fx-background-color: #350642; -fx-background-radius: 40;" text="AjouterSortie Sportif" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="127.0" layoutY="20.0" text="Nom sortie :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="66.0" text="Destination :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor2" layoutX="777.0" layoutY="44.0" prefHeight="54.0" prefWidth="242.0" style="-fx-background-radius: 60px 0px 0px 0px; -fx-background-color: #F19A16;">
+         <children>
+            <Button fx:id="logoutbtn1" layoutX="110.0" layoutY="9.0" mnemonicParsing="false" onAction="#logout" prefHeight="35.0" prefWidth="34.0" style="-fx-background-color: #F19A16;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/img_506421.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="46.0" fitWidth="55.0" layoutX="35.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/126376.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
