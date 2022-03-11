@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="712.0" prefWidth="995.0" style="-fx-background-color: #e5e7e6;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionmagasin.gui.InterfaceAjoutProduitController">
+    <stylesheets>
+        <URL value="@interfaceajoutproduit.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane fx:id="navbar" layoutX="-6.0" layoutY="88.0" prefHeight="624.0" prefWidth="290.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+         <children>
+            <Button fx:id="navItem" layoutY="27.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="266.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="88.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="266.0" text="Destinations" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="168.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="266.0" text=" Magasin" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="266.0" text=" Evènements" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutX="-5.0" layoutY="307.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="266.0" stylesheets="@interfaceajoutproduit.css" text=" Sorties" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutX="-5.0" layoutY="375.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="266.0" text="Transporteurs" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="navItem" layoutY="444.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="266.0" text="VIP" textFill="#f19a16">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane fx:id="anchor" layoutX="-54.0" layoutY="39.0" prefHeight="46.0" prefWidth="91.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="30.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/img_329115.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-54.0" layoutY="104.0" prefHeight="46.0" prefWidth="97.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="60.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/map-localization-icon-14.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="176.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="70.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/img_61350.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="240.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="71.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/event-icon-10.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="310.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="37.0" layoutX="65.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/Travel-Camping-Tent-icon%20(2).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-64.0" layoutY="387.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" layoutX="69.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/Icon-Campingbus-840x840.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor" layoutX="-62.0" layoutY="449.0" prefHeight="46.0" prefWidth="107.0" stylesheets="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/styleRoyale.css">
+               <children>
+                  <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="63.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Campination.GestionUser/src/campination/gestionuser/gui/images/img_336716.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text fill="#f19a16" layoutX="122.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="96.0" fitWidth="107.0" layoutX="21.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Text layoutX="117.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="349.0" layoutY="170.0" prefHeight="493.0" prefWidth="577.0" style="-fx-background-color: #fff; -fx-background-radius: 30px;">
+         <children>
+            <Label layoutX="44.0" layoutY="195.0" />
+            <Button fx:id="button" layoutX="177.0" layoutY="439.0" mnemonicParsing="false" onAction="#AjouterProduit" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: #350642;" text="Ajouter" textFill="WHITE" />
+            <Button fx:id="button" layoutX="321.0" layoutY="439.0" mnemonicParsing="false" onAction="#Annuler" prefHeight="30.0" prefWidth="96.0" style="-fx-background-color: f19a16;" text="Annuler" />
+            <TextField fx:id="txtnom" layoutX="146.0" layoutY="24.0" prefHeight="26.0" prefWidth="98.0" />
+            <TextField fx:id="txtp" layoutX="137.0" layoutY="95.0" prefHeight="18.0" prefWidth="107.0" />
+            <TextField fx:id="txtcat" layoutX="371.0" layoutY="96.0" prefHeight="26.0" prefWidth="114.0" />
+            <TextField layoutX="116.0" layoutY="247.0" />
+            <ComboBox layoutX="120.0" layoutY="172.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

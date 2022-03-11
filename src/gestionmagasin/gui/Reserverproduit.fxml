@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorePane" prefHeight="783.0" prefWidth="1018.0" style="-fx-background-color: #9da2ab;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionmagasin.gui.ReserverproduitController">
+   <children>
+      <ScrollPane layoutY="136.0" opacity="0.89" prefHeight="648.0" prefWidth="804.0">
+         <content>
+            <GridPane fx:id="grid">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="tfrecherche" layoutX="315.0" layoutY="76.0" opacity="0.89" promptText="Recherche" />
+      <Label fx:id="idgetter" layoutX="7.0" layoutY="119.0" opacity="0.89" text="Label" />
+      <ComboBox fx:id="combotri" layoutX="499.0" layoutY="76.0" opacity="0.89" prefWidth="150.0" promptText="Tri" />
+      <Button layoutX="659.0" layoutY="76.0" mnemonicParsing="false" onAction="#tri" opacity="0.89" style="-fx-background-color: f19a16; -fx-background-radius: 15;" text="Tri">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="859.0" layoutY="346.0" mnemonicParsing="false" onAction="#reserver" opacity="0.89" style="-fx-background-color: #350642; -fx-background-radius: 15;" text="Reserver" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="907.0" layoutY="14.0" mnemonicParsing="false" onAction="#mesProduits" opacity="0.89" style="-fx-background-color: #350642; -fx-background-radius: 15;" text="Mes Produits" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="859.0" layoutY="708.0" mnemonicParsing="false" onAction="#pdf" opacity="0.89" style="-fx-background-color: f19a16; -fx-background-radius: 15;" text="PDF">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <ImageView fitHeight="96.0" fitWidth="107.0" layoutX="31.0" layoutY="2.0" opacity="0.89" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo%20(7)%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Text layoutX="127.0" layoutY="63.0" opacity="0.89" strokeType="OUTSIDE" strokeWidth="0.0" text="Campination">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
